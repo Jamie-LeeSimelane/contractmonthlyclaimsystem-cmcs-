@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center mb-3">
+	<h1 class="display-4">Welcome, @(true ? "guest" : "Jamie")!</h1>
+</div>
+
+@await Html.PartialAsync("_Hero", new ContractMonthlyClaimSystem.Models.HeroViewModel {})
+
+<main class="container mt-2">
+	<div class="p-5 bg-light rounded shadow-sm">
+		<section class="mb-4">
+			<h1 class="display-4">Welcome to the Contract Monthly Claim System (CMCS)</h1>
+			<p class="lead">CMCS simplifies the process of submitting and approving monthly claims for Independent Contractor lecturers.</p>
+		</section>
+	</div>
+</main>
